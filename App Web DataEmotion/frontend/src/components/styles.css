@@ -1,0 +1,127 @@
+body {
+    background: #0d0d0d;
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.touse {
+    background: #252525;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(68, 66, 66, 0.2);
+    padding: 10px;
+    width: 40vw;
+    text-align: center;
+    font-size: medium;
+    box-shadow: 5px 5px 15px 15px rgba(68, 89, 148, 0.106);
+    margin-top:3%;
+    line-height:25px;
+}
+
+.containernav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #33333307;
+    color: white;
+}
+
+
+.navoptions {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 16px;
+    background-color: #555; 
+    border-radius: 5px;
+    transition: background-color 0.6s;
+    font-size:medium ;
+}
+
+
+
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+}
+
+.card {
+    background: #252525;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(68, 66, 66, 0.2);
+    padding: 10px;
+    width: 37vw;
+    text-align: start;
+    font-size:small;
+    box-shadow: 0px 5px 20px 10px rgba(68, 89, 148, 0.251);
+}
+
+
+
+form {
+    margin-top:1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45vw;
+}
+
+
+
+form input {
+    padding: 0.3vw;
+    border: 3px;
+    border-radius: 4px;
+    width: 35vw;
+    background-color: #d2d2d2;
+}
+
+form button {
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff99;
+    color: #FFF;
+    cursor: pointer;
+    margin-top: 25px;
+    width:18vw;
+    margin-bottom: 15px;
+}
+
+form button:hover {
+    background-color: #0057b378;
+}
+
+a {
+    color: #d4dbf6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #676d7e;
+}
+
+button:hover {
+    color: #676d7e;
+}
+
+
+@media screen and (min-width: 1300px) {
+    .card {
+        padding: 15px;
+        width: 27vw;
+    }
+    form input {
+        padding: 0.2vw;
+        width: 25vw;
+    }
+    form button {
+        width:7vw;
+    }
+}

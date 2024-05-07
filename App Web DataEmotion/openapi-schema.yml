@@ -1,0 +1,169 @@
+openapi: 3.0.2
+info:
+  title: ''
+  version: ''
+paths:
+  /appweb/api/v.1/appweb/:
+    get:
+      operationId: listPerfilUsuarios
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PerfilUsuario'
+          description: ''
+      tags:
+      - appweb
+    post:
+      operationId: createPerfilUsuario
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PerfilUsuario'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PerfilUsuario'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PerfilUsuario'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PerfilUsuario'
+          description: ''
+      tags:
+      - appweb
+  /appweb/api/v.1/appweb/{id}/:
+    get:
+      operationId: retrievePerfilUsuario
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this perfil usuario.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PerfilUsuario'
+          description: ''
+      tags:
+      - appweb
+    put:
+      operationId: updatePerfilUsuario
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this perfil usuario.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PerfilUsuario'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PerfilUsuario'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PerfilUsuario'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PerfilUsuario'
+          description: ''
+      tags:
+      - appweb
+    patch:
+      operationId: partialUpdatePerfilUsuario
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this perfil usuario.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PerfilUsuario'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/PerfilUsuario'
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/PerfilUsuario'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PerfilUsuario'
+          description: ''
+      tags:
+      - appweb
+    delete:
+      operationId: destroyPerfilUsuario
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this perfil usuario.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - appweb
+components:
+  schemas:
+    PerfilUsuario:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        user:
+          type: string
+          readOnly: true
+        nombres:
+          type: string
+          nullable: true
+          maxLength: 50
+        apellidos:
+          type: string
+          nullable: true
+          maxLength: 50
+        edad:
+          type: integer
+          maximum: 9223372036854775807
+          minimum: -9223372036854775808
+          format: int64
+          nullable: true
+        direccion:
+          type: string
+          nullable: true
+          maxLength: 254
